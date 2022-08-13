@@ -1,0 +1,42 @@
+//COLORS
+$textBlack: rgba(63, 63, 63, 1);
+$textGrey: rgba(180, 180, 180, 1);
+$textDarkPurple: rgba(73, 72, 94, 1);
+$lightCoral: rgba(255, 132, 132, 1);
+$brightGreen: rgba(123, 174, 115, 1);
+$disabledGrey: rgba(238, 238, 238, 1);
+
+//BUTTONS
+@mixin activeButton {
+  width: 100%;
+  padding: 10px 0 11px;
+  border-radius: 10px;
+  border: none;
+  background-color: $brightGreen;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+@mixin disabledButton {
+  width: 100%;
+  padding: 10px 0 11px;
+  border-radius: 10px;
+  border: none;
+  background-color: $disabledGrey;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: $textGrey;
+  transition: 0.2s;
+  cursor: default;
+}
