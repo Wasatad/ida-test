@@ -246,6 +246,8 @@ export default {
         border: 1px solid rgba(0, 0, 0, 0);
         border-radius: 4px;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        -webkit-appearance: none;
 
         font-size: 16px;
         color: $textBlack;
