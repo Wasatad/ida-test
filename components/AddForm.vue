@@ -242,6 +242,7 @@ export default {
         height: 42px;
         padding-left: 16px;
         margin-bottom: 16px;
+        background-color: #fff;
         border: 1px solid rgba(0, 0, 0, 0);
         border-radius: 4px;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
