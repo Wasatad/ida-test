@@ -17,6 +17,7 @@
             :name="product.name"
             :description="product.description"
             :price="product.price"
+            :id="product.id"
           ></item-card>
         </transition-group>
       </section>
@@ -25,19 +26,25 @@
 </template>
 
 <script>
-import { mapGetters, mapState } from "vuex";
+import { mapGetters, mapState, mapMutations } from "vuex";
 import AddForm from "../components/AddForm.vue";
 import FlashMessage from "../components/FlashMessage.vue";
 import SortingToggle from "../components/SortingToggle.vue";
 
 export default {
   components: { AddForm, SortingToggle, FlashMessage },
-  data() {
-    return {};
-  },
   computed: {
     ...mapGetters(["sortedProducts"]),
     ...mapState(["flashMessage"]),
+  },
+  methods: {
+    ...mapMutations(["prefetchProducts"]),
+  },
+  created() {
+    if (localStorage.getItem("products")) {
+      const localProducts = JSON.parse(localStorage.getItem("products"));
+      this.prefetchProducts(localProducts);
+    }
   },
 };
 </script>
@@ -77,6 +84,7 @@ export default {
       }
 
       .catalog {
+        width: 100%;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -100,10 +108,6 @@ export default {
   opacity: 0;
 }
 
-.list-item {
-  display: inline-block;
-  margin-right: 10px;
-}
 .list-enter-active,
 .list-leave-active {
   transition: all 0.5s;

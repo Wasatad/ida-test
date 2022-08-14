@@ -59,7 +59,6 @@
       </label>
       <div class="error-message">Поле является обязательным</div>
     </div>
-    <!-- <button class="active-btn">Добавить товар</button> -->
     <button
       :class="isAllDataEntered ? 'active-btn' : 'disabled-btn'"
       @click.prevent="addItem()"
@@ -138,6 +137,7 @@ export default {
       }
     },
     resetError($event) {
+      // Сбрасываем сообщение об ошибке
       if (
         $event.target
           .closest(".add-product__wrapper")
@@ -154,6 +154,8 @@ export default {
           .classList.remove("error");
       }
     },
+
+    // Разделение инпута стоимости на тысячи
     splitToThousands($event) {
       if (isNaN(+$event.data)) {
         const newVal = $event.target.value.split("");
@@ -161,7 +163,12 @@ export default {
         $event.target.value = newVal.join("");
       }
 
+      if ($event.data === "0" && $event.target.value.length === 1) {
+        $event.target.value = "";
+      }
+
       const inputNumber = +$event.target.value.replace(/\s/g, "");
+
       if (!$event.target.value) {
         $event.target.value = "";
       } else {
