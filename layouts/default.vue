@@ -98,6 +98,13 @@ input:focus {
   outline: none;
 }
 
+textarea {
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }

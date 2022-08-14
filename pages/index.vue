@@ -1,75 +1,43 @@
 <template>
   <main class="app-wrapper">
+    <transition name="flash">
+      <flash-message v-if="flashMessage.visible"></flash-message>
+    </transition>
     <div class="app-container">
       <TheHeader />
       <section class="content">
         <add-form class="add-form"></add-form>
         <sorting-toggle class="show-on-mobile"></sorting-toggle>
-        <div class="catalog">
+
+        <transition-group class="catalog" name="list" tag="div">
           <item-card
-            v-for="(item, id) in items"
-            :key="id"
-            :photo="item.photo"
-            :name="item.name"
-            :description="item.description"
-            :price="item.price"
+            v-for="product in sortedProducts"
+            :key="product.id"
+            :photo="product.photo"
+            :name="product.name"
+            :description="product.description"
+            :price="product.price"
           ></item-card>
-        </div>
+        </transition-group>
       </section>
     </div>
   </main>
 </template>
 
 <script>
+import { mapGetters, mapState } from "vuex";
 import AddForm from "../components/AddForm.vue";
+import FlashMessage from "../components/FlashMessage.vue";
 import SortingToggle from "../components/SortingToggle.vue";
+
 export default {
-  components: { AddForm, SortingToggle },
+  components: { AddForm, SortingToggle, FlashMessage },
   data() {
-    return {
-      items: [
-        {
-          photo:
-            "https://media.wired.com/photos/5b64db3717c26f0496f4d62d/master/w_1920,c_limit/Canon-G7XII-SOURCE-Canon.jpg",
-          name: "Наименование товара",
-          description:
-            "Довольно-таки интересное описание товара в несколько строк",
-          price: "20 000",
-        },
-        {
-          photo:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvrAzHEmMn0chpy5uKO6Qk_x11FT1ncWsszQ&usqp=CAU",
-          name: "Наименование товара",
-          description:
-            "Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк.",
-          price: "20 000",
-        },
-        {
-          photo:
-            "https://i1.adis.ws/i/canon/cr-n500-ambient_hero_93b9fa06eaf44cbdb7c4e3c3fd76d843?$hero-header-full-16by9-dt-jpg$",
-          name: "Наименование товара",
-          description:
-            "Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк",
-          price: "20 000",
-        },
-        {
-          photo:
-            "https://lirp.cdn-website.com/91325b3f/dms3rep/multi/opt/Template-images-canon-camera7-640w.jpg",
-          name: "Наименование товара",
-          description:
-            "Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк",
-          price: "20 000",
-        },
-        {
-          photo:
-            "https://media.wired.com/photos/5b64db3717c26f0496f4d62d/master/w_1920,c_limit/Canon-G7XII-SOURCE-Canon.jpg",
-          name: "Наименование товара",
-          description:
-            "Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк",
-          price: "20 000",
-        },
-      ],
-    };
+    return {};
+  },
+  computed: {
+    ...mapGetters(["sortedProducts"]),
+    ...mapState(["flashMessage"]),
   },
 };
 </script>
@@ -118,5 +86,35 @@ export default {
       }
     }
   }
+}
+
+.flash-enter-active {
+  transition: all 0.3s ease;
+}
+.flash-leave-active {
+  transition: all 0.6s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.flash-enter,
+.flash-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s;
+}
+.list-enter,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.list-move {
+  transition: transform 0.5s;
 }
 </style>
