@@ -1,6 +1,6 @@
 # ida-test
 
-Тестовое задание на ваканисю [Frontend-developer](https://idaproject.notion.site/Frontend-developer-test-9b834d020d8f406f851479791209beef)
+Решение [тестового задания](https://idaproject.notion.site/Frontend-developer-test-9b834d020d8f406f851479791209beef) на вакансию Frontend-developer
 
 - Live-версия проекта здесь: [Demo](https://wasatad.github.io/ida-test/)
 
