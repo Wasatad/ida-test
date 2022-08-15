@@ -22,6 +22,7 @@ h1 {
   font-weight: 600;
   font-style: normal;
   font-size: 28px;
+  line-height: 135%;
   color: $textBlack;
 }
 

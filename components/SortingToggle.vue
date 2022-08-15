@@ -56,7 +56,7 @@ export default {
   gap: 6px;
 
   width: 160px;
-  padding: 9px 16px 10px;
+  padding: 9px 16px;
   background-color: #fff;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 4px;

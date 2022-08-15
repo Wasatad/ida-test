@@ -204,7 +204,7 @@ export default {
       display: none;
       position: absolute;
       left: 0;
-      bottom: -17px;
+      bottom: -15px;
       width: 200px;
       font-weight: 400;
       color: $lightCoral;
@@ -229,8 +229,8 @@ export default {
         &::after {
           content: "";
           position: absolute;
-          top: 4px;
-          right: -6px;
+          top: 0px;
+          right: -5px;
           width: 4px;
           height: 4px;
           background-color: lightCoral;

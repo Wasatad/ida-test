@@ -20,6 +20,7 @@ $disabledGrey: rgba(238, 238, 238, 1);
   font-size: 12px;
   letter-spacing: -0.02em;
   color: #fff;
+  outline: none;
   transition: 0.2s;
   cursor: pointer;
   &:hover {
@@ -39,6 +40,7 @@ $disabledGrey: rgba(238, 238, 238, 1);
   font-size: 12px;
   letter-spacing: -0.02em;
   color: $textGrey;
+  outline: none;
   transition: 0.2s;
   cursor: pointer;
 }
