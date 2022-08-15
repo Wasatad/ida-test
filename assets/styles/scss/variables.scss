@@ -17,7 +17,8 @@ $disabledGrey: rgba(238, 238, 238, 1);
 
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
+  letter-spacing: -0.02em;
   color: #fff;
   transition: 0.2s;
   cursor: pointer;
@@ -35,7 +36,8 @@ $disabledGrey: rgba(238, 238, 238, 1);
 
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
+  letter-spacing: -0.02em;
   color: $textGrey;
   transition: 0.2s;
   cursor: pointer;

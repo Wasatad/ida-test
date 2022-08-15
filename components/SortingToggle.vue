@@ -55,11 +55,12 @@ export default {
   align-items: center;
   gap: 6px;
 
-  width: 200px;
-  padding: 10px 16px 11px;
+  width: 160px;
+  padding: 9px 16px 10px;
   background-color: #fff;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  font-size: 12px;
   color: $textGrey;
   cursor: pointer;
 
@@ -80,7 +81,7 @@ export default {
   .sorting-toggle__sorting-options {
     position: absolute;
     z-index: 1;
-    width: 170px;
+    width: 160px;
     border-radius: inherit;
     box-shadow: inherit;
 
@@ -91,8 +92,9 @@ export default {
     // padding: 7px 10px;
 
     li {
-      padding: 8px 14px;
+      padding: 6px 12px;
       color: $textBlack;
+      font-size: 12px;
 
       &:hover {
         background-color: #f0f0f0;

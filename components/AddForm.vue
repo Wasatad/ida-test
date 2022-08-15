@@ -188,7 +188,7 @@ export default {
   max-width: 332px;
 
   background-color: #fff;
-  padding: 24px;
+  padding: 18px 24px 24px 24px;
   border-radius: 4px;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04),
     0px 6px 10px rgba(0, 0, 0, 0.02);
@@ -208,7 +208,7 @@ export default {
       width: 200px;
       font-weight: 400;
       color: $lightCoral;
-      font-size: 12px;
+      font-size: 8px;
     }
     .error-message.active {
       display: block;
@@ -216,11 +216,12 @@ export default {
 
     .add-product__row {
       .add-product__label {
-        font-size: 14px;
+        font-size: 10px;
+        letter-spacing: -0.02em;
         color: $textDarkPurple;
         display: inline-block;
 
-        margin-bottom: 4px;
+        margin-bottom: 3px;
       }
 
       .add-product__label_required {
@@ -239,9 +240,9 @@ export default {
       .add-product__input {
         display: block;
         width: 100%;
-        height: 42px;
+        height: 36px;
         padding-left: 16px;
-        margin-bottom: 16px;
+        margin-bottom: 10px;
         background-color: #fff;
         border: 1px solid rgba(0, 0, 0, 0);
         border-radius: 4px;
@@ -249,7 +250,7 @@ export default {
         -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         -webkit-appearance: none;
 
-        font-size: 16px;
+        font-size: 12px;
         color: $textBlack;
 
         transition: border 0.2s;
@@ -260,7 +261,7 @@ export default {
 
         &::placeholder {
           color: $textGrey;
-          font-size: 15px;
+          font-size: 12px;
         }
       }
       .add-product__input.error {
@@ -276,7 +277,7 @@ export default {
 
   .active-btn {
     position: relative;
-    margin-top: 8px;
+    margin-top: 14px;
     @include activeButton;
   }
 
@@ -310,7 +311,7 @@ export default {
     }
   }
   .disabled-btn {
-    margin-top: 8px;
+    margin-top: 14px;
     @include disabledButton;
   }
 }

@@ -15,7 +15,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   @media (max-width: 500px) {
     flex-direction: column;
     align-items: flex-start;
