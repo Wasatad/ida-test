@@ -15,7 +15,7 @@ Catalog page with product adding form.
 
 ## Overview
 
-Product page with responsive layout.
+Products catalog with responsive layout.
 
 ### Functionality
 
@@ -35,7 +35,7 @@ Users are able to:
 
 ### Link
 
-- Live Site URL: [Demo](https://wasatad.github.io/products-list/)
+- Live Site URL: [Demo](https://wasatad.github.io/products-catalog/)
 
 ## My process
 
