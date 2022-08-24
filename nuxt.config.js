@@ -6,12 +6,12 @@ export default {
   target: "static",
 
   router: {
-    base: "/ida-test/",
+    base: "/products-catalog/",
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Тестовое Ida",
+    title: "Каталог товаров",
     htmlAttrs: {
       lang: "ru",
     },

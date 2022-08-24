@@ -1,74 +1,50 @@
-# ida-test
+# Products Catalog
 
-Решение [тестового задания](https://idaproject.notion.site/Frontend-developer-test-9b834d020d8f406f851479791209beef) на вакансию Frontend-developer
+Catalog page with product adding form.
 
-- Live-версия проекта здесь: [Demo](https://wasatad.github.io/ida-test/)
+## Table of contents
 
-## Build Setup
+- [Overview](#overview)
+  - [Functionality](#functionality)
+  - [Screenshot](#screenshot)
+  - [Link](#link)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-### `Node.js v16.14.0`
+## Overview
 
-```bash
-# install dependencies
-$ npm install
+Product page with responsive layout.
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+### Functionality
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+Users are able to:
 
-# generate static project
-$ npm run generate
-```
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Change sorting options
+- See error message if input not valid
+- Add product to the list
+- Delete product from the list
+- See animations
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+### Screenshot
 
-## Special Directories
+![image](src/assets/product-page-preview.png)
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+### Link
 
-### `assets`
+- Live Site URL: [Demo](https://wasatad.github.io/products-list/)
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+## My process
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+### Built with
 
-### `components`
+- [Vue.js](https://vuejs.org/) - JS framework
+- [Vuex.js](https://vuex.vuejs.org/) - State manager
+- [SCSS](https://sass-lang.com/) - CSS pre-processor
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+## Author
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+- Telegram - [@kuznetsovtm](https://t.me/@kuznetsovtm)
