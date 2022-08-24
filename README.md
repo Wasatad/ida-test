@@ -31,7 +31,7 @@ Users are able to:
 
 ### Screenshot
 
-![image](src/assets/product-page-preview.png)
+![image](src/assets/img/catalog-preview.png)
 
 ### Link
 
